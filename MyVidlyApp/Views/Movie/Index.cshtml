@@ -1,0 +1,38 @@
+﻿@model MyVidlyApp.Models.Movie
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1> Movies </h1>
+
+
+@if (Model._lstMovie.Count == 0)
+{
+
+    <text> No one has rented this movie before</text>
+
+}
+else
+{
+    <table>
+
+        <tr>
+            <th>Movies</th>
+        </tr>
+        <tr>
+
+            @foreach (var movies in Model._lstMovie)
+            {
+
+                <td>@movies.Name</td>
+            }
+
+        </tr>
+
+    </table>
+}
+
+
