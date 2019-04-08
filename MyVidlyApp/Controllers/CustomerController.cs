@@ -9,46 +9,56 @@ namespace MyVidlyApp.Controllers
 {
     public class CustomerController : Controller
     {
+
+        private ApplicationDbContext _context;
+
+        #region Constructor
+
+        public CustomerController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        //Matar o context por ser um Db(LiberarMemoria)
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+        #endregion
+
         // GET: Customer
         public ActionResult Index()
         {
 
-            //var viewModel = new ViewsModels.RandomMovieViewModel
-            //{
-            //    _lstCustomers = GetCustomers()
-            //};
-
-            Customer customer = new Customer();
-
-            customer._lstCustomers = GetCustomers();
-
-            //Tipos de return
-            //return Content("Hello Word");
-            //return HttpNotFound();
-            //return new EmptyResult();
-            //return RedirectToAction("Index", "Home", new { page = 1, shortBy = "name" });
-
-            //Enviar Dados para a View
-
-
-            return View(customer);
+            var customers = _context.Customers.ToList();
+                        
+            return View(customers);
 
         }
 
-        public List<Customer> GetCustomers()
-        {
-            return new List<Customer>
-            {
-                new Customer {Id = 10, Name = "John Smith"},
-                new Customer {Id = 20, Name = "Mary Willians"}
-            };
-        }
+        //public List<Customer> GetCustomers()
+        //{
+        //    return new List<Customer>
+        //    {
+        //        new Customer {Id = 10, Name = "John Smith"},
+        //        new Customer {Id = 20, Name = "Mary Willians"}
+        //    };
+        //}
 
 
         // GET: Customer/Details/5
+
         public ActionResult Details(int id)
         {
-            return View();
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if(customer == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(customer);
         }
 
         // GET: Customer/Create

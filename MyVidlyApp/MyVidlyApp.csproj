@@ -136,9 +136,34 @@
     <Compile Include="Migrations\201904081744224_InitialModel.Designer.cs">
       <DependentUpon>201904081744224_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904081806555_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201904081806555_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201904081806555_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081816440_AddMemberShipType.cs" />
+    <Compile Include="Migrations\201904081816440_AddMemberShipType.Designer.cs">
+      <DependentUpon>201904081816440_AddMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081838131_PopulateMemberShipTypes.cs" />
+    <Compile Include="Migrations\201904081838131_PopulateMemberShipTypes.Designer.cs">
+      <DependentUpon>201904081838131_PopulateMemberShipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081852413_UpdateCustomerTable.cs" />
+    <Compile Include="Migrations\201904081852413_UpdateCustomerTable.Designer.cs">
+      <DependentUpon>201904081852413_UpdateCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081856159_ApplyAnnotationToCustomer.cs" />
+    <Compile Include="Migrations\201904081856159_ApplyAnnotationToCustomer.Designer.cs">
+      <DependentUpon>201904081856159_ApplyAnnotationToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904081945033_ChangeModels.cs" />
+    <Compile Include="Migrations\201904081945033_ChangeModels.Designer.cs">
+      <DependentUpon>201904081945033_ChangeModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -218,6 +243,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Customer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,6 +262,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904081744224_InitialModel.resx">
       <DependentUpon>201904081744224_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081806555_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201904081806555_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081816440_AddMemberShipType.resx">
+      <DependentUpon>201904081816440_AddMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081838131_PopulateMemberShipTypes.resx">
+      <DependentUpon>201904081838131_PopulateMemberShipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081852413_UpdateCustomerTable.resx">
+      <DependentUpon>201904081852413_UpdateCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081856159_ApplyAnnotationToCustomer.resx">
+      <DependentUpon>201904081856159_ApplyAnnotationToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904081945033_ChangeModels.resx">
+      <DependentUpon>201904081945033_ChangeModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

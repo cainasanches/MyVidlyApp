@@ -21,7 +21,6 @@ namespace MyVidlyApp.Controllers
 
             Movie movie = new Movie();
 
-            movie._lstMovie = GetMovies();
 
             return View(movie);
 

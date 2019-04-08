@@ -11,7 +11,5 @@ namespace MyVidlyApp.Models
 
         public string Name { get; set; }
 
-        public List<Movie> _lstMovie { get; set; }
-
     }
 }
